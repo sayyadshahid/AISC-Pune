@@ -36,18 +36,34 @@ class Manager(Employee):
         print(f"Bonus: {self.bonus}")
         total = self.salary + self.bonus
         print(f"Total Salary (Salary + Bonus): {total}")
-        print("-" * 40)
+        print("---------------------------------------------")
         return total  
 
 # Main program
+
 n = int(input("Enter number of managers: "))
 managers = []
 
 for i in range(n):
-    print(f"\nEnter details for Manager {i+1}:")
+    print(f"\nEnter details for Manager ")
     m = Manager()
     m.accept()
     managers.append(m)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 max_manager = managers[0]
 max_total = managers[0].salary + managers[0].bonus

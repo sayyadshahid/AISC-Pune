@@ -13,6 +13,7 @@ for i in range(5):
     ln = int(input('enter nums '))
     list2.append(ln)
 
-merged = list(zip(list1, list2))
+merged = 1
+list(zip(list1, list2))
 
 print("List of tuples:", merged)

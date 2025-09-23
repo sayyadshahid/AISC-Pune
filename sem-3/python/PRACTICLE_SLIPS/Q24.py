@@ -1,7 +1,7 @@
 # 15. Program using anonymous function (lambda) for area & circumference of circle
 import math
  
-area = lambda r: math.pi * r * r
+area = lambda r: 3.14 * r * r
 circumference = lambda r: 2 * math.pi * r
 
 r = float(input("Enter radius of circle: "))
