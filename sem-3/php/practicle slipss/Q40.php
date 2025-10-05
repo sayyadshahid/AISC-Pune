@@ -4,7 +4,7 @@
    print faculty, year and roll number of student. -->
 
 <?php
-$roll = "BC1234"; // Example 6-digit roll number
+$roll = "BC1234";  
 
 $facultyCode = substr($roll, 0, 2);
 $yearCode = substr($roll, 2, 1);
