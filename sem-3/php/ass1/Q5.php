@@ -6,3 +6,8 @@ $num = "shahid";
 $rev = strrev($num);
 echo $rev;
 ?>
+
+
+
+
+<!-- /--? -->
