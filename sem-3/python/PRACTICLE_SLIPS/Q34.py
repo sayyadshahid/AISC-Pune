@@ -1,3 +1,4 @@
+
 # 3. Define a class Person having members – name, address.
 # Create a subclass called Employee with member staffid,, 
 # salary. Create ‘n’ objects of the Employee class and display all the details of the Employee.
@@ -38,3 +39,4 @@ for i in range(n):
 print("\n--- Employee Details ---")
 for e in employees:
     e.display()
+# ??//
