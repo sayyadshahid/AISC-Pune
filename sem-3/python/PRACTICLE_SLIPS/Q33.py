@@ -52,19 +52,6 @@ for i in range(n):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 max_manager = managers[0]
 max_total = managers[0].salary + managers[0].bonus
 
