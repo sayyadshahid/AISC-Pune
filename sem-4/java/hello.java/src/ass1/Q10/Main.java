@@ -1,4 +1,4 @@
-class Q10 {
+class Main {
     public static void main(String[] args) {
 
         System.out.println("Command line arguments in reverse order:");
