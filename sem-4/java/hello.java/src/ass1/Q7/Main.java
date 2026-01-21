@@ -10,7 +10,7 @@ class Main{
     
         while(num != 0){
             digit = num % 10;
-            sum = num + digit;
+            sum = sum + digit;
             num = num / 10;
         }
         System.out.println(sum);
