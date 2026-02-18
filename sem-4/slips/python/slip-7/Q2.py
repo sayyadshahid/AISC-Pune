@@ -3,7 +3,6 @@
 # 1. PUSH 2. POP 3. DISPLAY
 
 
-
 class Node:
     def __init__(self, data):
         self.data = data 
