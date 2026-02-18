@@ -1,7 +1,6 @@
 # Q2. Write python program to implement static stack with following operations           [15]
 # 1. PUSH 2. POP 3. DISPLAY
 
-
 MAX = 5
 stack = [0] * MAX
 top = -1
