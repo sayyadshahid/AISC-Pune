@@ -15,6 +15,7 @@ class DoublyLinkedList:
         self.head = None
 
 
+
     # 1. Append
     def append(self, data):
         new_node = Node(data)
