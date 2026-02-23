@@ -38,6 +38,7 @@ class SignlyLinkedList:
         new_node.next = temp.next
         temp.next = new_node
             
+            
         
     def display(self):
         if self.head is None:
