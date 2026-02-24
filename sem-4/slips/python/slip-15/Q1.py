@@ -3,30 +3,27 @@
 
 
 
-def binary_search(arr, key):
+def binary_search(arr, x):
     low = 0
     high = len(arr) - 1
 
     while low <= high:
         mid = (low + high) // 2
 
-        if arr[mid] == key:
-            return mid
-        elif arr[mid] < key:
+        if arr[mid] == x:
+            print("Element found at index:", mid)
+            return
+        elif arr[mid] < x:
             low = mid + 1
         else:
             high = mid - 1
 
-    return -1
+    print("Element not found")
 
 
 
 arr = [10, 20, 30, 40, 50, 60, 70]    
-key = 40
+x = 40
 
-result = binary_search(arr, key)
+result = binary_search(arr, x)
 
-if result != -1:
-    print("Element found at index:", result)
-else:
-    print("Element not found")

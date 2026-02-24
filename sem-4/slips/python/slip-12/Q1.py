@@ -12,7 +12,7 @@ def rev_sen(sen):
     while stack:
         rev_sen += stack.pop() + " "
 
-    return rev_sen.strip()
+    return rev_sen
 
 sentence = input("Enter a sentence: ")
 

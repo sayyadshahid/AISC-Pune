@@ -1,14 +1,16 @@
 # Q1. Write a Python program to sort numbers in ascending order using bubble sort.
 
-arr = [5, 3, 8, 4, 2]
+def bubble_sorting(arr):
+    n = len(arr)
+    flag = True
+    while flag:
+        flag = False
+        for i in range(1, n):
+            if arr[i - 1] > arr[i]:
+                flag = True
+                arr[i-1], arr[i] = arr[i], arr[i-1]
+    return arr
 
-n = len(arr)
-
-for i in range(n):
-    for j in range(0, n - i - 1):
-        if arr[j] > arr[j + 1]:
-            # Swap
-            arr[j], arr[j + 1] = arr[j + 1], arr[j]
-
-print("Sorted array in ascending order:")
-print(arr)
+A = [-1,2,-3,4,3,0,90,10]
+B= bubble_sorting(A)
+print(B)
