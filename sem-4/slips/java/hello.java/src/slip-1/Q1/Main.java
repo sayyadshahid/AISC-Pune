@@ -1,24 +1,20 @@
-// A. Write Java Program find maximum element of an array.
-// (Take Input as Command line argument)
+// B. Write a program to accept the user name and greet the user in uppercase.
 
-public class Main {
-    public static void main(String[] args) {
+import java.util.Scanner;
 
-        if(args.length == 0){
-            System.out.println("Please provide numbers.");
-            return;
-        }
+class Greeting
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
 
-        int max = Integer.parseInt(args[0]);
+        String name;
 
-        for(int i = 1; i < args.length; i++){
-            int num = Integer.parseInt(args[i]);
+        System.out.print("Enter your name: ");
+        name = sc.nextLine();
 
-            if(num > max){
-                max = num;
-            }
-        }
+        name = name.toUpperCase();   // Convert to uppercase
 
-        System.out.println("Maximum element = " + max);
+        System.out.println("Hello, " + name + ", nice to meet you!");
     }
 }
