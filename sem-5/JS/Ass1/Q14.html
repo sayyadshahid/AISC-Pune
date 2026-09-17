@@ -1,0 +1,21 @@
+<h3>Sum of Numbers in Array (for-of)</h3>
+
+<button onclick="sumArray()">Calculate Sum</button>
+
+<pre id="forOfOutput"></pre>
+
+<script>
+function sumArray() {
+
+    const numbers = [10, 20, 30, 40, 50];
+
+    let sum = 0;
+
+    for (let num of numbers) {
+        sum += num;
+    }
+
+    document.getElementById("forOfOutput").innerText =
+        `Sum: ${sum}`;
+}
+</script>

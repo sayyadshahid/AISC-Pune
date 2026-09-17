@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>second greatest element</p>
+    <input id="arr" type="text" placeholder="enter numbers like 1, 2,3,4,5">
+    <button onclick="secondGreatestNumber()">submit</button>
+    <p id="result"></p>
+</body>
+<script>
+    function secondGreatestNumber(){
+      let ans = document.getElementById("arr").value;
+      let normalArr = ans.split(",").map(n => parseFloat(n.trim()));
+      let sortedArr =  normalArr.sort((a, b)=> a-b);
+      let secondLowest = sortedArr[1]
+      let secondLarge = sortedArr[sortedArr.length - 2]
+      document.getElementById("result").innerHTML = `this is second largest ${secondLarge} and second lowest is ${secondLowest}`
+
+      
+    }
+</script>
+</html>
