@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>enter password
+    </p>
+
+    <input type="text" id="pass">
+    <button onclick="passStrength()">submit</button>
+
+    <p id="result"></p>
+</body>
+
+<script>
+    function passStrength(){
+
+        pwd = document.getElementById("pass").value;
+        rewsult = ""
+        hasCap = /[A-Z]/.test(pwd)
+        hasSmall = /[a-z]/.test(pwd)
+        hasDigit = /\d/.test(pwd)
+        
+        if(pwd.length < 6){
+            result = "pass is weak"
+        }else if(hasCap && hasDigit && hasSmall){
+            result = "password is strrongg"
+        }else{
+            result = "medium"
+        }
+        
+        document.getElementById("result").innerHTML = result
+    }
+
+</script>
+</html>
