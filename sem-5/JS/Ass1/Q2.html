@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>even, odd and devisible by 5</h3>
+    <input id="num" type="number" placeholder="enter a number">
+    <button onclick="evenOdd()">submit</button>
+
+
+    <p id="result"></p>
+</body>
+<script>
+function evenOdd(){
+    number = parseInt(document.getElementById("num").value)
+
+    if(number % 2 === 0){
+        msg = "the number is even";
+    }else{
+        msg = "odd";
+    }
+
+    if(number % 5 === 0){
+        msg += "5";
+    }else{
+        msg += "not 5";
+    }
+
+    document.getElementById("result").innerHTML = msg;
+}
+
+
+</script>
+</html>
