@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>start pattern</p>
+    <input type="text"  id="row" placeholder="enter no of rows">
+    <button onclick="startPattern()" >start</button>
+
+<pre id="result"></pre>
+</body>
+
+<script>
+function startPattern(){
+    let n = parseInt(document.getElementById("row").value);
+    let result = ""
+    for(let i = 1; i <= n; i++){
+        for(let j = 1; j<= n; j++){
+            result += (i * j).toString().padStart(4, " ");
+        }
+        result += "\n";
+    }
+    document.getElementById("result").innerHTML = result;
+}
+
+</script>
+</html>
