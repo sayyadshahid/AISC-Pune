@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="count">counter</p>
+    <button id="inc" onclick="increaseCounter()">increase</button>
+    <button onclick="resetCounter()">reset</button>
+</body>
+
+<script>
+
+let count = 0;
+function increaseCounter(){
+   let maxCount = 5;
+    while(count < maxCount){
+        count++;
+        break;
+    }
+
+    document.getElementById("count").innerHTML = count;
+    
+    if (count >= maxCount){
+        documetn.getElementById("inc").disable = True;
+          alert("You reached the maximum of 5 clicks!");
+    }
+}
+
+function resetCounter(){
+    count = 0;
+    document.getElementById("count").innerHTML = count;
+    document.getElementById("inc").disable = false;
+}
+</script>
+</html>
