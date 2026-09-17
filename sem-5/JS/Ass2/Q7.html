@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Find Difference Between Two Arrays</h2>
+
+Array 1:
+<input type="text" id="arr1"
+       placeholder="e.g. 1,2,3">
+
+<br><br>
+
+Array 2:
+<input type="text" id="arr2"
+       placeholder="e.g. 3,4,5">
+
+<br><br>
+
+<button onclick="findDifference()">Find Difference</button>
+
+<p id="result"></p>
+</body>
+
+<script>
+
+    function findDifference(){
+        let input1 = document.getElementById("arr1").value;
+        let input2 = document.getElementById("arr2").value;
+
+        let arr1 = input1.split(",");
+        let arr2 = input2.split(",");
+
+        for(let i = 0; i < arr1.length; i++){
+            arr1[i] = arr1[i].trim();
+        }
+
+        for(let i =0; i < arr2.length; i++){
+            arr2[i] = arr2[i].trim();
+        }
+
+        let diff = [];
+
+        for(let i = 0; i< arr1.length; i++){
+            if(!arr2.includes(arr1[i])){
+                diff.push(arr1[i]);
+            }
+        }
+
+        for(let i = 0; i < arr2.length; i++){
+            if(!arr1.includes(arr2[i])){
+                diff.push(arr2[i]);
+            }
+
+        document.getElementById("result").innerHTML = diff.join(", ")
+        }
+    }
+</script>
+</html>
