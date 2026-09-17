@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>calculator</h1>
+    <input type="number" id="n1" placeholder="enter a number">
+    <br>
+    <input type="text" id="op" placeholder="enter operator +,-,*,/">
+    <br>
+    <input type="number" id="n2" placeholder="enter a number">
+    <br>
+    <button onclick="calculator() ">calculate</button>
+
+    <p id="result"></p>
+</body>
+
+<script>
+    function calculator(){
+        a = parseFloat(document.getElementById("n1").value);
+        op = document.getElementById("op").value.trim();
+        b = parseFloat(document.getElementById("n2").value);
+        result = ""
+        switch(op){
+            case  '+':
+                result = a + b;
+                break;
+            case '-': 
+                result = a - b;
+                break;
+
+            case  '*':
+                result = a * b;
+                break;
+            
+            case '/':
+                result = a / b;
+                break;
+            default:
+                alert('invalid operator');
+
+        }
+
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</html>

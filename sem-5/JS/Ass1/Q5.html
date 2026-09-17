@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day of the Week - Switch Statement</title>
+</head>
+<body>
+
+<h2>Day of the Week</h2>
+
+<input type="number" id="dayNumber" placeholder="Enter number (1–7)">
+<button onclick="getDay()">Get Day</button>
+
+<p id="dayResult"></p>
+
+<script>
+function getDay() {
+    const day = parseInt(document.getElementById("dayNumber").value);
+    let result;
+
+    switch(day) {
+        case 1:
+            result = "Sunday";
+            break;
+
+        case 2:
+            result = "Monday";
+            break;
+
+        case 3:
+            result = "Tuesday";
+            break;
+
+        case 4:
+            result = "Wednesday";
+            break;
+
+        case 5:
+            result = "Thursday";
+            break;
+
+        case 6:
+            result = "Friday";
+            break;
+
+        case 7:
+            result = "Saturday";
+            break;
+
+        default:
+            result = "Invalid Day Number";
+    }
+
+    document.getElementById("dayResult").innerText = result;
+}
+</script>
+
+</body>
+</html>
