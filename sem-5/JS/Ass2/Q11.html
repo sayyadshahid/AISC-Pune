@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Stack and Queue Operations</h2>
+
+<input type="text" id="inputValue"
+       placeholder="Enter value">
+
+<button onclick="pushStack()">Push (Stack)</button>
+<button onclick="popStack()">Pop (Stack)</button>
+
+<button onclick="enqueue()">Enqueue (Queue)</button>
+<button onclick="dequeue()">Dequeue (Queue)</button>
+
+<h3>Stack:</h3>
+<p id="stackDisplay">[]</p>
+
+<h3>Queue:</h3>
+<p id="queueDisplay">[]</p>
+
+<script>
+let stack = [];
+let queue = [];
+
+function pushStack(){
+    let value = document.getElementById("inputValue").value;
+    if (value != ""){
+        stack.push(value);
+    }
+}
+
+function popStack() {
+
+    if (stack.length > 0) {
+        stack.pop();
+        updateDisplays();
+    } else {
+        alert("Stack is empty!");
+    }
+}
+
+function enqueue() {
+
+    let value =
+        document.getElementById("inputValue").value;
+
+    if (value !== "") {
+        queue.push(value);
+        updateDisplays();
+    }
+}
+
+function dequeue() {
+
+    if (queue.length > 0) {
+        queue.shift();
+        updateDisplays();
+    } else {
+        alert("Queue is empty!");
+    }
+}
+
+function updateDisplays() {
+
+    document.getElementById("stackDisplay").textContent =
+        JSON.stringify(stack);
+
+    document.getElementById("queueDisplay").textContent =
+        JSON.stringify(queue);
+
+    document.getElementById("inputValue").value = "";
+}
+
+
+
+</script>
+</body>
+</html>
