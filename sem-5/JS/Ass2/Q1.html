@@ -6,21 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <p>second greatest element</p>
-    <input id="arr" type="text" placeholder="enter numbers like 1, 2,3,4,5">
-    <button onclick="secondGreatestNumber()">submit</button>
+    <p>largest word</p>
+    <input type="text"  id="word">
+    <button onclick="findLargestWord()" >click</button>
+
     <p id="result"></p>
 </body>
-<script>
-    function secondGreatestNumber(){
-      let ans = document.getElementById("arr").value;
-      let normalArr = ans.split(",").map(n => parseFloat(n.trim()));
-      let sortedArr =  normalArr.sort((a, b)=> a-b);
-      let secondLowest = sortedArr[1]
-      let secondLarge = sortedArr[sortedArr.length - 2]
-      document.getElementById("result").innerHTML = `this is second largest ${secondLarge} and second lowest is ${secondLowest}`
 
-      
+<script>
+    function findLargestWord(){
+        let sentence = document.getElementById("word").value;
+        let words = sentence.split(" ");
+        let largestWord = ""
+        for(let i = 0; i < words.length; i++){
+            if(words[i].length > largestWord.length){
+                largestWord = words[i]
+            }
+        }
+
+
+        document.getElementById("result").innerHTML = largestWord
+
     }
 </script>
 </html>
