@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sum of Even and Odd Numbers</h2>
+
+Enter numbers:
+
+<input type="text" id="numInput"
+       placeholder="e.g. 1,2,3,4,5">
+
+<br><br>
+
+<button onclick="calculateSums()">Calculate</button>
+
+<pre id="result"></pre>
+
+
+<script>
+function calculateSums(){ 
+let input = document.getElementById("numInput").value;
+let numbers = input.split(",").map(n => parseInt(n.trim())).filter(num => !isNaN(num));
+
+const even = numbers.filter(i => i % 2 === 0);
+const odd = numbers.filter(i => i % 2 !== 0);
+
+const evenSum = even.reduce((a, curr) => a + curr, 0);
+const oddSum =  odd.reduce((a, curr)=> a + curr, 0);
+
+document.getElementById("result").innerHTML = 
+ "Sum of Even Numbers: " + evenSum +
+ "\nSum of Odd Numbers: " + oddSum;
+
+}
+</script>
+</body>
+</html>
