@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>voewels and consonants</p>
+    <input type="text" placeholder="enter a charecter" maxlength="1" id="char">
+    <button onclick="vowels()">submit</button>
+
+<p id="result"></p>
+</body>
+
+
+<script>
+    function vowels(){
+
+        ch = document.getElementById("char").value.toLowerCase();
+        if(ch == 'a' | ch == "e" | ch == "i" | ch == "o" | ch == "u"){
+            msg = "this is vovel";
+        }else{
+            msg = "this is consonent";
+        }
+        document.getElementById("result").innerHTML = msg;
+    }
+</script>
+</html>
