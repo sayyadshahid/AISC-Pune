@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Assign Function to Variable & Pass as Parameter</h2>
+
+<button onclick="run()">Run</button>
+
+<p id="output"></p>
+</body>
+
+<script>
+    let greet = function(name){
+        return `hello ${name}!`;
+    }
+
+    function display(func, value){
+        let msg = func(value);
+        document.getElementById("output").innerHTML = msg;
+    }
+
+    function run(){
+        display(greet, "shahid");
+    }
+</script>
+</html>
