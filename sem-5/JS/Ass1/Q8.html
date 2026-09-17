@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>palidrom or not </p>
+    <input type="text" placeholder="enter a word" id="pali">
+    <button onclick="palidromCh()">submit</button>
+    <p id="result"></p>
+</body>
+<script>
+    function palidromCh(){
+
+        let word = document.getElementById("pali").value.toLowerCase();
+        let reverse = "";
+        
+        for(let i = word.length - 1; i >= 0; i-- ){
+            reverse += word[i];
+        }
+        
+        if(reverse === word){
+            document.getElementById("result").innerHTML = "palidrom";
+        }else{
+            document.getElementById("result").innerHTML = "not palidrom";
+            
+        }
+    }
+
+</script>
+</html>
