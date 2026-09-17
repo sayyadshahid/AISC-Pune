@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>remove duplicates</p>
+    <input type="text" id="dupli">
+    <button onclick="removeDuplicate()">submit</button>
+
+    <p id="result"></p>
+</body>
+
+<script>
+
+    function removeDuplicate(){
+        let input = document.getElementById("dupli").value;
+        let items = input.split(",").map(item => item.trim());
+
+        let uniqueItems = [];
+        for (let i = 0; i< items.length; i++){
+            let itemLower  = items[i].toLowerCase();
+
+            let alreadyExist = uniqueItems.some(
+                ex => ex.toLowerCase() === itemLower
+            )
+
+            if(!alreadyExist){
+                uniqueItems.push(items[i]);
+            }
+        }
+         document.getElementById("result").innerText =
+        "Unique Items: " + uniqueItems.join(", ");
+    }
+
+</script>
+</html>
