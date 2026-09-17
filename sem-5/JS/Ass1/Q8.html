@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onClick="IncreaseCounter()" >click</button>
+    <button onclick="ResetCounter()">reset</button>
+    <p id = "click" >Counter: 0</p>
+</body>
+
+<script> 
+
+let click = 0;
+function IncreaseCounter(){
+    if(click <= 5){
+        click++;
+        document.getElementById("click").innerHTML = "Clicks: " + click;
+    }
+    if(click === 5){
+        document.querySelector("button").disabled = true;
+    }
+}
+
+function ResetCounter(){
+    click = 0;
+    document.getElementById("click").innerHTML = "Click: 0";
+    document.querySelector("button").disaled = false;
+}
+
+
+</script>
+</html>
