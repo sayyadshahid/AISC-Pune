@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiply Array Elements</title>
+</head>
+<body>
+
+<h2>Multiply Array Elements by a Number</h2>
+
+Enter numbers:
+
+<input type="text" id="arrayInput"
+       placeholder="e.g. 1,2,3,4">
+
+<br><br>
+
+Multiply by:
+
+<input type="number" id="multiplyBy"
+       placeholder="e.g. 2">
+
+<br><br>
+
+<button onclick="multiplyArray()">Multiply</button>
+
+<p id="result"></p>
+
+<script>
+
+function multiplyArray() {
+
+    const input =
+        document.getElementById("arrayInput").value;
+
+    const multiplier =
+        parseFloat(
+            document.getElementById("multiplyBy").value
+        );
+
+    const arr = input.split(",")
+                    .map(num => num.trim());
+
+    const result = arr.map(num => num * multiplier);
+
+    document.getElementById("result").innerText =
+        "Result: " + result.join(", ");
+}
+
+</script>
+
+</body>
+</html>
