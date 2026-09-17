@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Stock</title>
+</head>
+<body>
+
+<h2>Available Products</h2>
+
+<ul id="output"></ul>
+
+<script>
+
+const products = [
+
+    {
+        id: 1,
+        name: "Laptop",
+        price: 50000,
+        inStock: true
+    },
+
+    {
+        id: 2,
+        name: "Mouse",
+        price: 700,
+        inStock: false
+    },
+
+    {
+        id: 3,
+        name: "Keyboard",
+        price: 1500,
+        inStock: true
+    },
+
+    {
+        id: 4,
+        name: "Monitor",
+        price: 10000,
+        inStock: false
+    },
+
+    {
+        id: 5,
+        name: "Pen Drive",
+        price: 600,
+        inStock: true
+    }
+];
+
+const available =
+    products.filter(p => p.inStock);
+
+const productList =
+    available.map(
+        p => `<li>${p.name} - Rs. ${p.price}</li>`
+    );
+
+document.getElementById("output").innerHTML =
+    productList.join("");
+
+</script>
+
+</body>
+</html>
