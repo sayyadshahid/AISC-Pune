@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Negative Values</title>
+</head>
+<body>
+
+<h2>Filter Negative Values from Array</h2>
+
+Enter numbers:
+
+<input type="text" id="numInput"
+       placeholder="e.g. 5, -3, 2, -8, 0">
+
+<br><br>
+
+<button onclick="filterNegatives()">
+    Filter Negatives
+</button>
+
+<p id="result"></p>
+
+<script>
+
+function filterNegatives() {
+
+    const input =
+        document.getElementById("numInput").value;
+
+    const numbers = input.split(",")
+                         .map(num => parseFloat(num.trim()))
+                         .filter(num => !isNaN(num));
+
+    const negatives =
+        numbers.filter(num => num < 0);
+
+    document.getElementById("result").innerText =
+        negatives.length > 0
+        ? "Negative values: " + negatives.join(", ")
+        : "No negative values found.";
+}
+
+</script>
+
+</body>
+</html>
