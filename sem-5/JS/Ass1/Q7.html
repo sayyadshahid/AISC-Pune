@@ -1,0 +1,26 @@
+<h3>Counter App</h3>
+
+<p id="counterValue">0</p>
+
+<button onclick="increment()">Increment</button>
+<button onclick="decrement()">Decrement</button>
+
+<script>
+let count = 0;
+
+function increment() {
+    if (count < 10) {
+        count++;
+    }
+
+    document.getElementById("counterValue").innerText = count;
+}
+
+function decrement() {
+    if (count > 0) {
+        count--;
+    }
+
+    document.getElementById("counterValue").innerText = count;
+}
+</script>
