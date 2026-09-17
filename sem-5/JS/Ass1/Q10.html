@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>secret number 1-10</p>
+    <button onclick="game()">start game</button>
+    <p id="result"></p>
+</body>
+
+<script>
+    function game(){
+
+        secret = Math.floor(Math.random() * 10) + 1;
+        let gess;
+        do{
+            guess = parseInt(prompt("enter a number"));
+
+        if (guess === secret) {
+            alert("Correct! You guessed the secret number!");
+        } else if (!guess || guess < 1 || guess > 10) {
+            alert("Please enter a valid number between 1 and 10.");
+        } else {
+            alert("Wrong guess! Try again.");
+        }
+
+        }while(!gess == secret)
+
+        document.getElementById("result").innerHTML = `the ans was ${secret}`
+    }
+
+</script>
+</html>
