@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>2nd largest and smalelst</p>
+    <input type="text" id="nums">
+    <button onclick="sortNumbers()" >check</button>
+
+    <p id="result"></p>
+</body>
+
+<script>
+    function sortNumbers(){
+        let input = document.getElementById("nums").value;
+        let numbers = input.split(",").map(n => parseFloat(n.trim()));
+
+        if (numbers.length < 2 || numbers.some(isNaN)){
+            document.getElementById("result").innerHTML = "enter valid numbers as placeholder"
+        }
+
+        numbers.sort((a, b) => b - a);
+        let highest = numbers.shift()
+
+        while(numbers.length && numbers[0] == highest){
+            numbers.shift()
+        }
+        let seconHighest = numbers[0];
+
+        numbers = input.split(",").map(n => parseFloat(n.trim()));
+
+        numbers.sort((a, b)=> a - b);
+        let lowest = numbers.shift();
+
+        while(numbers.length && numbers[0]  === lowest){
+            numbers.shift();
+        }
+
+        let secondLowest = numbers[0];
+
+        if (secondLowest === undefined ||
+        seconHighest === undefined) {
+
+        document.getElementById("result").innerText =
+            "Not enough unique numbers.";
+
+    } else {
+
+        document.getElementById("result").innerText =
+            "Second Lowest: " + secondLowest +
+            "\nSecond Greatest: " + seconHighest;
+    }
+        
+    }
+</script>
+</html>
