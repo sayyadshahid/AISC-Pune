@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <button onclick="Division()">submit</button>
+
+    <p id="result"></p>
+
+    <b id="finalMsg"></b>
+</body>
+
+<script>
+    function Division(){
+         let n1 = document.getElementById("n1").value;
+         let n2 = document.getElementById("n2").value;
+         let msg =  document.getElementById("result");
+         try{
+            if(n2 === 0){
+                throw new Error("can not devide by 0");
+            }
+
+            let result = n1 / n2;
+            msg.innerHTML = result; 
+         }catch(e){
+            msg.innerHTML = "Error: " + err.message;
+         }finally{
+            document.getElementById("finalMsg").innerHTML = "thanks!"
+         }
+        }
+
+</script>
+</html>
