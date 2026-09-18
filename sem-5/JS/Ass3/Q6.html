@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="list">
+    <button onclick="submit()">add</button>
+
+    <ul id="ul"></ul>
+
+    <script>
+        function submit(){
+            let input = document.getElementById("list").value;
+            let lis = document.getElementById("ul");
+            if(input.trim() !== ""){
+                const newItem = document.createElement("li");
+                newItem.textContent = input;
+
+                lis.appendChild(newItem);
+
+                input = "";
+            }
+        }
+    </script>
+</body>
+</html>
