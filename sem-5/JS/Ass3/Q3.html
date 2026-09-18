@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="age">
+    <button onclick="submit()" >submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function submit(){
+            let input = parseInt(document.getElementById("age").value);
+            let msg = document.getElementById("output");
+            try{
+                if(input < 18){
+                throw new Error ("ur under 18");
+                }else if(input > 100){
+                throw new Error ("enter valid age");
+                }else{
+                    msg.style.color = "green"
+                    msg.innerHTML = "yooooo"
+                }
+            }catch(e){
+                msg.style.color = "red";
+                msg.innerHTML = e.message;
+            }
+        }
+    </script>
+</body>
+</html>
