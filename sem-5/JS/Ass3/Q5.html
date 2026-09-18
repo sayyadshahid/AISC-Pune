@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="ddd" alt="image1" id="img">
+    <p id="caption">this is image 1</p>
+
+    <br>
+    <button onclick="submit()">toggle</button>
+
+    <script>
+let toggle = true;
+function submit(){
+    let image = document.getElementById("img");
+    let caption = document.getElementById("caption");
+
+    if(toggle){
+        image.src = "iiiiii";
+        image.alt = "imge2";
+        caption.innerHTML = "yoooooooo img 2";
+    }else{
+        image.src = "ddd";
+        image.alt = "image1";
+        caption.innerHTML = "this is image 1";
+    }
+
+    toggle = !toggle;
+}
+
+
+
+    </script>
+</body>
+
+
+</html>
