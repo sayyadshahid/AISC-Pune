@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="btns">
+        <button>btn1</button>
+        <button>btn2</button>
+        <button>btn3</button>
+    </div>
+
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("btns").addEventListener("click", function(e){
+            if(e.target.tagName === "BUTTON"){
+
+                document.getElementById("result").innerHTML = e.target.textContent;
+
+            }
+        })
+    </script>
+</body>
+</html>
