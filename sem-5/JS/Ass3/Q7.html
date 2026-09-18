@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+        <p id="old"> hey this is shahid </p>
+    </div>
+
+    <button onclick="submit()">replace</button>
+        <script>
+function submit(){
+  let container = document.getElementById("container");
+  let oldPara = document.getElementById("old");
+
+  let newPara = document.createElement("p");
+  newPara.textContent = "hey this is mother fucker";
+  
+  container.replaceChild(newPara, oldPara);
+}
+
+
+
+        </script>
+</body>
+</html>
