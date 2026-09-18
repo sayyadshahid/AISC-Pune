@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="mirr" onkeyup="submit()">
+    <p id="mirror">
+        Live......
+    </p>
+
+    <script>
+        function submit(){
+            let input = document.getElementById("mirr").value;
+            let Live = document.getElementById("mirror").textContent = input || "Live .....";
+        }
+    </script>
+</body>
+</html>
