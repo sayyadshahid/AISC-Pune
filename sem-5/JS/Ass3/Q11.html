@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="submit()">click</button>
+    <p id="result"></p>
+
+    <script>
+        class Person {
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+         greet(){
+                return `${this.name} and ${this.age}.`;
+            }
+        }
+
+        function submit(){
+            let result = document.getElementById("result");
+
+            const p1 = new Person("shhaid", 21);
+            result.textContent = p1.greet();
+        }
+    </script>
+</body>
+</html>

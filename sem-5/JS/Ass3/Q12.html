@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Constructor Function Example</h2>
+
+<button onclick="displayCar()">
+    Show Car Details
+</button>
+
+<p id="carOutput"></p>
+
+<script>
+    function Car(brand, year){
+        this.brand = brand;
+        this.year = year;
+
+    }
+
+    Car.prototype.getDetails = function (){
+         return `Brand: ${this.brand}, Year: ${this.year}`;rn 
+    }
+
+    function displayCar(){
+        const car1 = new Car("yooo", 1920);
+         document.getElementById("carOutput")
+        .textContent =
+        car1.getDetails(); 
+    }
+</script>
+</body>
+</html>
