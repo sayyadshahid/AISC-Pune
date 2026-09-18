@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="valid">
+    <button onclick="emailValidation()">submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function emailValidation(){
+            let input = document.getElementById("valid").value;
+            try{
+                if(!input.includes("@") && !input.includes(".") ){
+                    throw new Error("enter valid email");
+                }
+
+                document.getElementById("output").style.color = "green";
+                document.getElementById("output").innerHTML = "email recives!!";
+            }catch (e){
+            document.getElementById("output").innerHTML = e.message;
+
+            }
+        }
+    </script>
+</body>
+</html>
