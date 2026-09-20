@@ -1,3 +1,5 @@
+<!-- Q2. Write JS to remove duplicate items from an array (ignore case sensitivity). [15] -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,34 +8,26 @@
     <title>Document</title>
 </head>
 <body>
-    <p>remove duplicates</p>
-    <input type="text" id="dupli">
-    <button onclick="removeDuplicate()">submit</button>
+    <input type="text" id="val">
+    <button onclick="submit()">submit</button>
 
     <p id="result"></p>
-</body>
 
-<script>
 
-    function removeDuplicate(){
-        let input = document.getElementById("dupli").value;
-        let items = input.split(",").map(item => item.trim());
-
-        let uniqueItems = [];
-        for (let i = 0; i< items.length; i++){
-            let itemLower  = items[i].toLowerCase();
-
-            let alreadyExist = uniqueItems.some(
-                ex => ex.toLowerCase() === itemLower
-            )
-
-            if(!alreadyExist){
-                uniqueItems.push(items[i]);
+    <script>
+        function submit(){
+            let input = document.getElementById("val").value;
+            let words = input.split(", ");
+            let unique = [];
+            for(let i = 0; i < words.length; i++){
+                let lower = words[i].toLowerCase()
+              if(!unique.includes(lower)){
+                unique.push(lower)
+              }
             }
-        }
-         document.getElementById("result").innerText =
-        "Unique Items: " + uniqueItems.join(", ");
-    }
 
-</script>
+            document.getElementById("result").innerHTML = unique.join(" ");
+        }
+    </script>
+</body>
 </html>

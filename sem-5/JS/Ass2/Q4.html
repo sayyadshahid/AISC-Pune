@@ -1,3 +1,6 @@
+<!-- Q2. Write JS program to take an array of numbers and finds the second lowest and second -->
+<!-- greatest numbers, respectively.  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,54 +9,26 @@
     <title>Document</title>
 </head>
 <body>
-    <p>2nd largest and smalelst</p>
-    <input type="text" id="nums">
-    <button onclick="sortNumbers()" >check</button>
+    <input type="text" id="val">
+    <button onclick="submit()">submit</button>
 
     <p id="result"></p>
+    <script>
+        function submit(){
+            let input = document.getElementById("val").value;
+            let numbers = input.split(",").map(p => p.trim());
+
+            let assSrtNum = numbers.sort((a, b) => a-b);
+            let smallest = assSrtNum[1]
+
+            let dssSrtNum = numbers.sort((a, b) => b - a);
+            let largest = dssSrtNum[1]
+
+            document.getElementById("result").innerHTML = `second largest is ${largest} and second smallest is ${smallest}`
+            
+
+
+        }
+    </script>
 </body>
-
-<script>
-    function sortNumbers(){
-        let input = document.getElementById("nums").value;
-        let numbers = input.split(",").map(n => parseFloat(n.trim()));
-
-        if (numbers.length < 2 || numbers.some(isNaN)){
-            document.getElementById("result").innerHTML = "enter valid numbers as placeholder"
-        }
-
-        numbers.sort((a, b) => b - a);
-        let highest = numbers.shift()
-
-        while(numbers.length && numbers[0] == highest){
-            numbers.shift()
-        }
-        let seconHighest = numbers[0];
-
-        numbers = input.split(",").map(n => parseFloat(n.trim()));
-
-        numbers.sort((a, b)=> a - b);
-        let lowest = numbers.shift();
-
-        while(numbers.length && numbers[0]  === lowest){
-            numbers.shift();
-        }
-
-        let secondLowest = numbers[0];
-
-        if (secondLowest === undefined ||
-        seconHighest === undefined) {
-
-        document.getElementById("result").innerText =
-            "Not enough unique numbers.";
-
-    } else {
-
-        document.getElementById("result").innerText =
-            "Second Lowest: " + secondLowest +
-            "\nSecond Greatest: " + seconHighest;
-    }
-        
-    }
-</script>
 </html>

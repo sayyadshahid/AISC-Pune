@@ -31,16 +31,10 @@ Array 2:
         let input1 = document.getElementById("arr1").value;
         let input2 = document.getElementById("arr2").value;
 
-        let arr1 = input1.split(",");
-        let arr2 = input2.split(",");
+        let arr1 = input1.split(",").map(p => p.trim());
+        let arr2 = input2.split(",").map(p => p.trim());
 
-        for(let i = 0; i < arr1.length; i++){
-            arr1[i] = arr1[i].trim();
-        }
-
-        for(let i =0; i < arr2.length; i++){
-            arr2[i] = arr2[i].trim();
-        }
+       
 
         let diff = [];
 

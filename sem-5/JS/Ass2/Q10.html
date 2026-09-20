@@ -29,7 +29,7 @@ function filterNegatives() {
 
     const numbers = input.split(",")
                          .map(num => parseFloat(num.trim()))
-                         .filter(num => !isNaN(num));
+                         
 
     const negatives =
         numbers.filter(num => num < 0);
