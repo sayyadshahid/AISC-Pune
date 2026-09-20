@@ -1,0 +1,40 @@
+<!-- Q2. Write JS program to write a function countCharacters that counts the occurrences of each
+character in a string and returns the results as an object [15]  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <input type="text" id="inp" placeholder="Enter a string">
+
+    <button onclick="submit()">Submit</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function countChar(input){
+            result = {};
+            for(let i = 0; i < input.length; i++){
+                let ch = input[i];
+                if(result[ch]){
+                    result[ch]++;
+                }else{
+                    result[ch] = 1;
+                }
+            }
+            return result
+        }
+
+        function submit(){
+            let inp = document.getElementById("inp").value;
+            let ar = inp.split("");
+            document.getElementById("result").innerHTML = JSON.stringify(countChar(ar));
+        }
+    </script>
+</body>
+</html>

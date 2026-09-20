@@ -1,0 +1,34 @@
+<!-- Q2. Write JS program to take an array of numbers and finds the second lowest and second -->
+<!-- greatest numbers, respectively.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="val">
+    <button onclick="submit()">submit</button>
+
+    <p id="result"></p>
+    <script>
+        function submit(){
+            let input = document.getElementById("val").value;
+            let numbers = input.split(",").map(p => p.trim());
+
+            let assSrtNum = numbers.sort((a, b) => a-b);
+            let smallest = assSrtNum[1]
+
+            let dssSrtNum = numbers.sort((a, b) => b - a);
+            let largest = dssSrtNum[1]
+
+            document.getElementById("result").innerHTML = `second largest is ${largest} and second smallest is ${smallest}`
+            
+
+
+        }
+    </script>
+</body>
+</html>
