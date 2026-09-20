@@ -1,0 +1,31 @@
+<!-- Q1. Write JS program to take age input from user and classify as Child (0–12), Teen (13–19), Adult
+(20–59), or Senior (60+).  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="age">
+    <button onclick="submit()">submit</button>
+
+
+    <p id="result"> </p>
+    <script>
+        function submit(){
+            let age = document.getElementById("age").value;
+            let res = document.getElementById("result");
+           if (age >= 0 && age <= 12) { res.innerHTML = "Child"; } 
+           else if (age >= 13 && age <= 19) 
+           { res.innerHTML = "Teen"; }
+            else if (age >= 20 && age <= 59) 
+            { res.innerHTML = "Adult"; }
+             else if (age >= 60) { res.innerHTML = "Senior"; }
+              else { res.innerHTML = "Invalid Age"; }
+        }
+    </script>
+</body>
+</html>

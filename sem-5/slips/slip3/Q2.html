@@ -1,0 +1,52 @@
+<!-- Q2. Write JS program to create an array of product objects with fields: id, name, price, inStock. Use
+filter() to return only available items. Use map() to create a list of product names with prices. Use arrow
+functions throughout [15] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="output"></ul>
+
+
+    <script>
+        let object = [
+            {
+                id: 1,
+                name: "shahid",
+                price: 800,
+                inStock: true
+            },
+            {
+                id: 2,
+                name: "shahid",
+                price: 8300,
+                inStock: true
+            },
+            {
+                id: 3,
+                name: "shahid",
+                price: 8500,
+                inStock: false
+            },
+            {
+                id: 4,
+                name: "shahid",
+                price: 8020,
+                inStock: false
+            },
+
+        ]
+
+       let available = object.filter(x => x.inStock);
+       let product = available.map(p => 
+        `<li>price: ${p.price} - ${p.id}</li>`
+       )
+
+       document.getElementById("output").innerHTML = product.join(" ");
+    </script>
+</body>
+</html>
