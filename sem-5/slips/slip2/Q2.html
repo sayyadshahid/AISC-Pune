@@ -1,0 +1,26 @@
+<!-- Q2. Write JS program to create a live preview system where the user types in a textbox and the text is
+mirrored dynamically in a styled <div>..  -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="value" onkeyup="submit()">
+
+        <div id="result">
+live
+        </div>
+
+        <script>
+            function submit(){
+                let input = document.getElementById("value").value;
+                document.getElementById("result").innerHTML = input || "live....."
+            }
+        </script>
+        
+    </body>
+    </html>
