@@ -1,0 +1,32 @@
+<!-- Q2. Write JS program to write a function find Longest Word that takes a string of words and returns the
+longest word in the string [15] -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="sen" placeholder="enter a sent">
+    <button onclick="submit()">submit</button>
+
+    <h1 id="result"></h1>
+
+    <script>
+        function submit(){
+            let input = document.getElementById("sen").value;
+            let words = input.split(" ");
+            let result = "";
+            for(let i = 0; i < words.length; i++){
+                if(words[i].length > result.length){
+                    result = words[i];
+                }
+            }
+
+            document.getElementById("result").innerHTML = result
+        }
+    </script>
+</body>
+</html>
