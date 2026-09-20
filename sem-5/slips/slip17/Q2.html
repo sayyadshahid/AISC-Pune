@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="count"></p>
+    <button onclick="submit()" id="inc">Increment</button>
+    <button onclick="reset()" id="res">reset</button>
+
+    <script>
+        let count = 0;
+        function submit (){
+            if (count < 5){
+                count++;
+                document.getElementById("count").innerHTML = count;
+            } if (count == 5) {
+                document.getElementById("inc").disabled = true;
+            }
+        }
+
+         function reset (){
+            count = 0
+             document.getElementById("count").innerHTML = count;
+             document.getElementById("inc").disabled = false;
+
+             
+        }
+    </script>
+</body>
+</html>
