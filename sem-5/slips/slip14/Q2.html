@@ -1,0 +1,39 @@
+<!-- Q2. Write JS program to create two counters Increment and Decrement.  
+Increment counter should start from 0 and can be incremented till 9. 
+Decrement counter decrement by 1 and should stop to  0 .      	 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="inc">0</p>
+    <button onclick="inc()" >inc </button> <br>
+
+    <p id="dec">9</p>
+    <button onclick="dec()">dec</button>
+
+
+    <script>
+        let incCount = 0; 
+        let decCount = 9;
+        function inc(){
+                if(incCount < 9){
+                    incCount++;
+                    document.getElementById("inc").innerHTML = incCount;
+                }  
+        }
+
+        function dec(){
+            if(decCount > 0){
+                    decCount--;
+                    document.getElementById("dec").innerHTML = decCount;
+                } 
+        }
+    </script>
+</body>
+</html>

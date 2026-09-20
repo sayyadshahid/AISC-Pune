@@ -1,0 +1,31 @@
+<!-- Q2. Write JS  program to click a button to replace a specific paragraph using replaceChild().						           							[15]
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div id="container">
+
+        <p id="replace">click what the fuck is this </p>
+    </div>
+        <button onclick="submit()">submit</button>
+
+    <script>
+        function submit(){
+            let cont = document.getElementById("container");
+            let oldPara = document.getElementById("replace");
+
+            let newPara = document.createElement("p");
+            newPara.innerHTML = "djjjjjjjjjjjjjjjjjjdddd";
+            
+            cont.replaceChild(newPara, oldPara);
+        }
+    </script>
+ </body>
+ </html>
