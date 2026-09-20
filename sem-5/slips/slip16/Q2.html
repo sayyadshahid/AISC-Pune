@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Number</title>
+</head>
+<body>
+
+    <h2>Guess a Number Between 1 and 10</h2>
+
+    <script>
+        const secretNumber = 7; // Static number
+        let guess;
+
+        while (guess !== secretNumber) {
+            guess = Number(prompt("Guess a number between 1 and 10:"));
+        }
+
+        alert("Correct! You guessed the number.");
+    </script>
+
+</body>
+</html>
