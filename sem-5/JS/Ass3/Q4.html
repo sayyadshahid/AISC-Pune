@@ -6,15 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text"  id="mirr" onkeyup="submit()">
-    <p id="mirror">
-        Live......
-    </p>
+    <input type="text" id="val" onkeyup="submit()">
+    <p id="live">Live....</p>
 
     <script>
         function submit(){
-            let input = document.getElementById("mirr").value;
-            let Live = document.getElementById("mirror").textContent = input || "Live .....";
+            let input = document.getElementById("val").value;
+            let live = document.getElementById("live").innerHTML = input || "live ----";
         }
     </script>
 </body>

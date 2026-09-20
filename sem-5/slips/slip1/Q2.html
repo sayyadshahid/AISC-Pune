@@ -1,0 +1,30 @@
+<!-- Q2. Write JS program to create a form to add items to a list dynamically using appendChild(). [15] -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <input type="text" id="add" placeholder="add item">
+    <button onclick="submit()">add item</button>
+
+
+    <ul id="list"></ul>
+
+    <script>
+function submit(){
+    let input = document.getElementById("add").value;
+    let lis = document.getElementById("list");
+    let listN = document.createElement("li");
+    listN.textContent = input;
+     
+    lis.appendChild(listN);
+    input = "";
+    
+}
+
+    </script>
+ </body>
+ </html>
