@@ -1,0 +1,32 @@
+<!-- Q2. Write JS to remove duplicate items from an array (ignore case sensitivity). [15] -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="val">
+    <button onclick="submit()">submit</button>
+
+    <p id="result"></p>
+
+
+    <script>
+        function submit(){
+            let input = document.getElementById("val").value;
+            let words = input.split(", ");
+            let unique = [];
+            for(let i = 0; i <= words.length; i++){
+              if(!unique.includes(words[i])){
+                unique.push(words[i])
+              }
+            }
+
+            document.getElementById("result").innerHTML = unique.join(" ");
+        }
+    </script>
+</body>
+</html>
