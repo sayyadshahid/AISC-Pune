@@ -19,9 +19,10 @@
             let input = document.getElementById("val").value;
             let words = input.split(", ");
             let unique = [];
-            for(let i = 0; i <= words.length; i++){
-              if(!unique.includes(words[i])){
-                unique.push(words[i])
+            for(let i = 0; i < words.length; i++){
+                let lower = words[i].toLowerCase()
+              if(!unique.includes(lower)){
+                unique.push(lower)
               }
             }
 

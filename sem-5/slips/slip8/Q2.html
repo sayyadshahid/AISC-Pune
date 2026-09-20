@@ -1,0 +1,34 @@
+<!-- Q2. Write JS program to create a form to validate an email address. If the input is not a valid email, throw an error and display a message.
+Expected Behavior:
+•	If the email does not contain @ and ., throw a custom error.
+•	Catch the error and show it in red.	 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="mail">
+    <button onclick="submit()">submit</button>
+    <p id="result"></p>
+    <script>
+        function submit(){
+            let input = document.getElementById("mail").value;
+            try{
+
+                if(!input.includes(".") || !input.includes("@")){
+                   throw new Error("invalid err")
+                }else{
+                    document.getElementById("result").innerHTML = "successfullyy"
+                }
+            }catch(e){
+                 document.getElementById("result").innerHTML = e.message;
+            }
+        }
+    </script>
+</body>
+</html>
