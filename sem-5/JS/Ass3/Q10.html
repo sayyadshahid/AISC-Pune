@@ -15,13 +15,11 @@
     <p id="result"></p>
 
     <script>
-        document.getElementById("btns").addEventListener("click", function(e){
-            if(e.target.tagName === "BUTTON"){
-
-                document.getElementById("result").innerHTML = e.target.textContent;
-
-            }
-        })
+       document.getElementById("btns").addEventListener("click", function(e){
+        if(e.target.tagName == "BUTTON"){
+            document.getElementById("result").innerHTML = e.target.textContent
+        }
+       })
     </script>
 </body>
 </html>

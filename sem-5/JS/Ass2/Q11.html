@@ -26,57 +26,20 @@
 <script>
 let stack = [];
 let queue = [];
-
 function pushStack(){
-    let value = document.getElementById("inputValue").value;
-    if (value != ""){
-        stack.push(value);
+    let input = document.getElementById("inputValue").value;
+        stack.push(input);
+        document.getElementById("stackDisplay").innerText = JSON.stringify(stack)
+}
+
+function popStack(){
+    let input = document.getElementById("inputValue").value;
+    if(input.length > 0){
+        stack.pop()
+        document.getElementById("stackDisplay").innerText = JSON.stringify(stack)
+
     }
 }
-
-function popStack() {
-
-    if (stack.length > 0) {
-        stack.pop();
-        updateDisplays();
-    } else {
-        alert("Stack is empty!");
-    }
-}
-
-function enqueue() {
-
-    let value =
-        document.getElementById("inputValue").value;
-
-    if (value !== "") {
-        queue.push(value);
-        updateDisplays();
-    }
-}
-
-function dequeue() {
-
-    if (queue.length > 0) {
-        queue.shift();
-        updateDisplays();
-    } else {
-        alert("Queue is empty!");
-    }
-}
-
-function updateDisplays() {
-
-    document.getElementById("stackDisplay").textContent =
-        JSON.stringify(stack);
-
-    document.getElementById("queueDisplay").textContent =
-        JSON.stringify(queue);
-
-    document.getElementById("inputValue").value = "";
-}
-
-
 
 </script>
 </body>
